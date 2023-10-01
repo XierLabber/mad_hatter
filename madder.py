@@ -31,27 +31,29 @@ class ME(object):
     def beautifully_roar(self, person):
         self.do_str(person, "roars beautifully with")
 
-def fuck_world(me: ME, len = 50):
+def fuck_world(me: ME, len = 5):
     everything = [ME(generate_word()) for i in range(len)]
     for rubbish in everything:
-        random_do = random.randint(0, 3)
-        if random_do == 0:
-            me.eat(rubbish)
-        elif random_do == 1:
-            me.sunnily_squirm(rubbish)
-        elif random_do == 2:
-            me.excitedly_crawl(rubbish)
-        elif random_do == 3:
-            me.beautifully_roar(rubbish)
-        random_do = random.randint(0, 3)
-        if random_do == 0:
-            rubbish.eat(me)
-        elif random_do == 1:
-            rubbish.excitedly_crawl(me)
-        elif random_do == 2:
-            rubbish.sunnily_squirm(me)
-        elif random_do == 3:
-            rubbish.beautifully_roar(me)
+        if random.randint(0, 1) == 0:
+            random_do = random.randint(0, 3)
+            if random_do == 0:
+                me.eat(rubbish)
+            elif random_do == 1:
+                me.sunnily_squirm(rubbish)
+            elif random_do == 2:
+                me.excitedly_crawl(rubbish)
+            elif random_do == 3:
+                me.beautifully_roar(rubbish)
+        else:
+            random_do = random.randint(0, 3)
+            if random_do == 0:
+                rubbish.eat(me)
+            elif random_do == 1:
+                rubbish.excitedly_crawl(me)
+            elif random_do == 2:
+                rubbish.sunnily_squirm(me)
+            elif random_do == 3:
+                rubbish.beautifully_roar(me)
 
 name = input('please input your name:')
 fuck_world(ME(name))

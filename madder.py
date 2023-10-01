@@ -44,4 +44,5 @@ def f(me: ME):
         me.beautifully_roar(rubbish)
         rubbish.beautifully_roar(me)
 
-f(ME('Fat Sheep'))
+name = input('please input your name:')
+f(ME(name))

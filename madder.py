@@ -55,5 +55,6 @@ def fuck_world(me: ME, len = 5):
             elif random_do == 3:
                 rubbish.beautifully_roar(me)
 
-name = input('please input your name:')
-fuck_world(ME(name))
+name = input('please input your name: ')
+n_items = input('how many times would you like to like this world: ')
+fuck_world(ME(name), int(n_items))
